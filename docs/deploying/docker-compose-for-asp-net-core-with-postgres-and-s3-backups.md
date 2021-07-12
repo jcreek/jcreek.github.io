@@ -3,7 +3,7 @@ layout: post
 parent: Containers & Deploying
 nav_order: 1
 title:  "Docker Compose for ASP.Net Core with Postgres + S3 backups"
-date:   2021-07-11 23:01:45 +0100
+date:   2021-07-12 21:01:45 +0100
 categories: deploying docker
 ---
 
@@ -261,60 +261,60 @@ services:
     depends_on:
       - db
       # - migrations
-    # migrations:
-    # container_name: dbmigrations
-    # build: 
-    #     context: .
-    #     dockerfile: MyAspProjectName/Migrations.Dockerfile
-    # environment:
-    #     - ASPNETCORE_ENVIRONMENT=Production
-    # depends_on: 
-    #     - db
-    db:
-        container_name: myappdb
-        image: "postgres"
-        ports:
-            - "5432:5432"
-        env_file:
-        - database.env # configure postgres
-        volumes:
-        - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
-    mail:
-        image: bytemark/smtp
-    pgbackups3:
-        build:
-            context: .
-            dockerfile: postgres-backup-s3/Dockerfile
-        links:
-            - db
-        environment:
-            SCHEDULE: '@daily'
-            S3_REGION: eu-west-2
-            S3_ACCESS_KEY_ID: keygoeshere
-            S3_SECRET_ACCESS_KEY: secretkeygoeshere
-            S3_BUCKET: yourapp-backups
-            S3_PREFIX: backup
-            POSTGRES_HOST: db
-            POSTGRES_DATABASE: yourdbname
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: passwordgoeshere
-            POSTGRES_EXTRA_OPTS: '--schema=public --blobs'    
-    # pgrestores3:
-    #     build:
-    #         context: .
-    #         dockerfile: postgres-restore-s3/Dockerfile
-    #     links:
-    #         - db
-    #     environment:
-    #         S3_ACCESS_KEY_ID: keygoeshere
-    #         S3_SECRET_ACCESS_KEY: secretkeygoeshere
-    #         S3_BUCKET: yourapp-backups
-    #         S3_PREFIX: backup
-    #         POSTGRES_HOST: db
-    #         POSTGRES_DATABASE: yourdbname
-    #         POSTGRES_USER: postgres
-    #         POSTGRES_PASSWORD: passwordgoeshere
-    #         DROP_PUBLIC: 'yes'
+  # migrations:
+  # container_name: dbmigrations
+  # build: 
+  #     context: .
+  #     dockerfile: MyAspProjectName/Migrations.Dockerfile
+  # environment:
+  #     - ASPNETCORE_ENVIRONMENT=Production
+  # depends_on: 
+  #     - db
+  db:
+      container_name: myappdb
+      image: "postgres"
+      ports:
+          - "5432:5432"
+      env_file:
+      - database.env # configure postgres
+      volumes:
+      - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+  mail:
+      image: bytemark/smtp
+  pgbackups3:
+      build:
+          context: .
+          dockerfile: postgres-backup-s3/Dockerfile
+      links:
+          - db
+      environment:
+          SCHEDULE: '@daily'
+          S3_REGION: eu-west-2
+          S3_ACCESS_KEY_ID: keygoeshere
+          S3_SECRET_ACCESS_KEY: secretkeygoeshere
+          S3_BUCKET: yourapp-backups
+          S3_PREFIX: backup
+          POSTGRES_HOST: db
+          POSTGRES_DATABASE: yourdbname
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: passwordgoeshere
+          POSTGRES_EXTRA_OPTS: '--schema=public --blobs'    
+  # pgrestores3:
+  #     build:
+  #         context: .
+  #         dockerfile: postgres-restore-s3/Dockerfile
+  #     links:
+  #         - db
+  #     environment:
+  #         S3_ACCESS_KEY_ID: keygoeshere
+  #         S3_SECRET_ACCESS_KEY: secretkeygoeshere
+  #         S3_BUCKET: yourapp-backups
+  #         S3_PREFIX: backup
+  #         POSTGRES_HOST: db
+  #         POSTGRES_DATABASE: yourdbname
+  #         POSTGRES_USER: postgres
+  #         POSTGRES_PASSWORD: passwordgoeshere
+  #         DROP_PUBLIC: 'yes'
 
 volumes:
     database-data: # named volumes can be managed easier using docker-compose
