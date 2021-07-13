@@ -147,7 +147,7 @@ In this example, it's a Vue instance for creating invoices and updating stock le
 
 To hook this into the DOM, just add the element identifier to an element, for example `<div id="create-invoice">` will bind a div to this Vue instance.
 
-Within that, you are free to use a variety of tools, like v-if, interpolation and v-on event handlers. In this example, if there's any text in the `successMessage` property of the Vue data object, this alert div will be displayed, interpolating the message, and clearing it (thus hiding the alert) when the close button is clicked.
+Within that, you are free to use a variety of tools, like `v-if`, interpolation and `v-on` event handlers. In this example, if there's any text in the `successMessage` property of the Vue data object, this alert div will be displayed, interpolating the message, and clearing it (thus hiding the alert) when the close button is clicked.
 
 ```html
 <div v-if="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
@@ -159,11 +159,11 @@ Within that, you are free to use a variety of tools, like v-if, interpolation an
 </div>
 ```
 
-In this example, a v-for is used to loop through all the products in the array, producing a `<tr>` for each of them, with an appropriate class bound  from a method taking that product as a parameter. V-if and v-else statements enable conditionally showing one (or none) of three different pooltips. The product's name property is interpolated and shown, as is the unitPrice property, which is nicely formatted for readability.
+In this example, a `v-for` is used to loop through all the products in the array, producing a `<tr>` for each of them, with an appropriate class bound  from a method taking that product as a parameter. `v-if` and `v-else` statements enable conditionally showing one (or none) of three different pooltips. The product's `name` property is interpolated and shown, as is the `unitPrice` property, which is nicely formatted for readability.
 
-The barcode field is mapped to a v-model, which means as it changes it directly alters the value in the Vue data object, and as that changes this updates reactively. It also makes use of v-on:blur to run a method that makes an API call to retrieve product data, conditionally sets the disabled property once a barcode has been entered, and binds a class based on the output of a method taking the product as a parameter.
+The `barcode` field is mapped to a `v-model`, which means as it changes it directly alters the value in the Vue data object, and as that changes this updates reactively. It also makes use of `v-on:blur` to run a method that makes an API call to retrieve product data, conditionally sets the disabled property once a barcode has been entered, and binds a class based on the output of a method taking the product as a parameter.
 
-The quantity field also uses a v-model, but specifically forces it to be a number (no need for Typescript here) runs a method on keypress (the `@@` syntax is purely due to Razor escaping, normally you'd only need one) and on change.
+The `quantity` field also uses a `v-model`, but specifically forces it to be a number (no need for Typescript here) runs a method on keypress (the `@@` syntax is purely due to Razor escaping, normally you'd only need one) and on change.
 
 ```html
 <tr v-for="product in products" v-bind:class="getProductRowClass(product)">
