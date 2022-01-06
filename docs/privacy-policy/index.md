@@ -6,6 +6,12 @@ permalink: /privacy-policy/
 
 # {{page.title}}
 
+## Paladins Bounty Marketplace Chrome Extension
+
+This extension uses your bounty_id cookie (from the bounty marketplace) and makes a POST request to the official endpoint for retrieving the list of current offers on the market. This data is not stored anywhere, is just used within your current browser session, and is only sent to the official endpoint that the bounty marketplace itself uses.
+
+The below privacy policy applies other than this cookie.
+
 ## What data do we collect?
 
 None.
