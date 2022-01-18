@@ -1,7 +1,7 @@
 ---
 layout: post
 parent: Web Development
-nav_order: 1
+nav_order: 2
 title:  "Adding JSNLog to ASP .Net 6 with Serilog"
 date:   2022-01-18 21:43:32 +0000
 categories: dotnet core asp serilog jsnlog
