@@ -24,6 +24,8 @@ Yes, that's all they need. They don't even need to install any extensions - the 
 
 ## How to set up the project
 
+You will need to ensure that you've created a `.gitattributes` file in the root folder if you don't have one already, and specified `* text=auto eol=lf` to default all the line endings to LF, if you're on Windows and find that swapping between the host and the container changes the line endings in all your files.
+
 In the root of the repo create a folder called `.devcontainer`. Within this you need to create three files:
 
 1. `devcontainer.json`
@@ -148,7 +150,7 @@ services:
   
   mail:
     image: bytemark/smtp
-    restart: always
+    restart: unless-stopped
 
 volumes:
   postgres-data:
