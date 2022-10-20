@@ -2,7 +2,7 @@ site_name: Josh Creek's Blog
 site_url: https://www.jcreek.co.uk/
 repo_url: https://github.com/jcreek/jcreek.github.io
 repo_name: Spotted an issue?
-edit_uri: edit/master/mkdocs/
+edit_uri: edit/master/docs/
 
 theme:
   name: material
