@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch MkDocs",
+            "request": "launch",
+            "runtimeArgs": [
+                "serve"
+            ],
+            "runtimeExecutable": "mkdocs",
+            "type": "node",
+            "stopOnEntry": true,
+        }
+    ]
+}
