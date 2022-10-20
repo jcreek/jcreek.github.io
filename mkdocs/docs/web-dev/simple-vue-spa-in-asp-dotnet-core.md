@@ -1,17 +1,17 @@
 ---
-layout: post
-parent: Web Development
-nav_order: 1
-title:  "Creating a reactive SPA simply within an ASP.Net Core web app with Vue.js"
-date:   2021-07-12 21:42:57 +0100
-categories: vue dotnet core asp
+tags:
+  - web development
+  - dotnet
+  - c#
+  - vue
+  - asp
 ---
 
-# {{page.title}}
+# Creating a reactive SPA simply within an ASP.Net Core web app with Vue.js
 
-_{{page.date}}_
+_2021-07-12_
 
-![](/assets/vuejsexample1.gif)
+![](/img/vuejsexample1.gif)
 
 In this post, I will cover how you can quickly and easily use Vue.js to make a reactive 'SPA' within ASP.Net Core. This is a slightly dirty way to do things, but for rapid prototyping or a simple project it does the job just fine without any unnecessary complications. By 'SPA' I mean a Single Page Application, except without any navigation as that's handled by the underlying ASP.Net Core application, as is the API called by Vue.js methods.
 
@@ -28,7 +28,7 @@ At the bottom of your Razor page/view, you'll need to include a `<script>` tag t
 
 In this example, it's a Vue instance for creating invoices and updating stock levels. The above gif shows some of the functionality achieved with this, including dynamically adding classes, and looping through elements in an array with markup for each.
 
-```html
+```html linenums="1"
 <script>
     const createInvoice = new Vue({
         el: '#create-invoice',
@@ -149,7 +149,7 @@ To hook this into the DOM, just add the element identifier to an element, for ex
 
 Within that, you are free to use a variety of tools, like `v-if`, interpolation and `v-on` event handlers. In this example, if there's any text in the `successMessage` property of the Vue data object, this alert div will be displayed, interpolating the message, and clearing it (thus hiding the alert) when the close button is clicked.
 
-```html
+```html linenums="1"
 <div v-if="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
     <i class="bi bi-check-circle-fill"></i>
     <strong>Success:</strong> {{ successMessage }}
@@ -165,7 +165,7 @@ The `barcode` field is mapped to a `v-model`, which means as it changes it direc
 
 The `quantity` field also uses a `v-model`, but specifically forces it to be a number (no need for Typescript here) runs a method on keypress (the `@@` syntax is purely due to Razor escaping, normally you'd only need one) and on change.
 
-```html
+```html linenums="1"
 <tr v-for="product in products" v-bind:class="getProductRowClass(product)">
     <td>
         <div class="tooltip" v-if="product.barcode.length > 0 && product.stockLevel - product.quantity < 0">

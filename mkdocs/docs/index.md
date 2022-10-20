@@ -1,21 +1,13 @@
----
-layout: default
-title: Home
-nav_order: 1
-description: "The website for Josh Creek."
-permalink: /
----
+<!-- ---
+hide:
+  - navigation
+  - toc
+  - tags
+--- -->
 
 # Welcome to the site
-{: .fs-9 }
 
 This is the place where I ramble about technology and coding. Sometimes Computer Science education too.
-{: .fs-6 .fw-300 }
-
-[Learn who I am](#about-me){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View my GitHub](https://github.com/jcreek){: .btn .fs-5 .mb-4 .mb-md-0 }
-
----
 
 ## About Me
 
@@ -53,8 +45,8 @@ I code in a variety of languages, and use a number of different tools. Here they
 - MongoDB (if I really have to)
 - Python (a bit rusty these days but fine for making simple scripts)
 - Docker & Docker Compose
-- AWS
-- Proxmox (for baremetal virtualisation)
+- AWS & Azure
+- Proxmox & TrueNAS Scale
 - Windows/MacOS/Linux
 - Photoshop/Lightroom
 - Davinci Resolve/Premiere Pro
@@ -63,13 +55,9 @@ I code in a variety of languages, and use a number of different tools. Here they
 
 #### UCL Institute of Education
 
-##### July 2015 - July 2016
-
 Postgraduate Certificate in Education
 
 #### University of Exeter
-
-##### September 2012 - July 2015
 
 English with Proficiency in French
 

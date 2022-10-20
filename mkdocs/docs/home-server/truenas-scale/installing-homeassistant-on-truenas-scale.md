@@ -1,15 +1,13 @@
 ---
-layout: post
-parent: Home Server
-nav_order: 1
-title:  "Installing Home Assistant OS on Truenas Scale"
-date:   2022-03-08 18:33:12 +0000
-categories: home assistant, truenas scale, home server
+tags:
+  - home server
+  - truenas scale
+  - home assistant
 ---
 
-# {{page.title}}
+# Installing Home Assistant OS on Truenas Scale
 
-_{{page.date}}_
+_2022-03-08_
 
 Mostly taken from https://www.truenas.com/community/threads/home-assistant-vm-on-scale.91058/post-666766 and cleaned up.
 

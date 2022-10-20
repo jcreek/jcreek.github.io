@@ -1,15 +1,12 @@
 ---
-layout: post
-parent: Containers & Deploying
-nav_order: 2
-title:  "Docker Compose for S3 Backup and Restore of PostgreSQL"
-date:   2021-07-12 21:27:19 +0100
-categories: deploying docker
+tags:
+  - deploying
+  - docker
 ---
 
-# {{page.title}}
+# Docker Compose for S3 Backup and Restore of PostgreSQL
 
-_{{page.date}}_
+_2021-07-12_
 
 In this post, I will cover how you can set up two Docker containers for backing up and restoring Postgres databases using S3 in AWS.
 

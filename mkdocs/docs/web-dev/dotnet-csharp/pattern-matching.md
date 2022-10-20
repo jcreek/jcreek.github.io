@@ -1,15 +1,14 @@
 ---
-layout: post
-parent: Web Development
-nav_order: 3
-title:  "C# 8 Pattern Matching"
-date:   2022-02-15 19:07:21 +0000
-categories: dotnet csharp
+tags:
+  - web development
+  - dotnet
+  - c#
+  - pattern matching
 ---
 
-# {{page.title}}
+# C# 8 Pattern Matching
 
-_{{page.date}}_
+_2022-02-15_
 
 This serves as introductory documentation to the pattern matching features introduced in C# 8, which I think are particularly useful.
 
@@ -17,7 +16,7 @@ This serves as introductory documentation to the pattern matching features intro
 
 Adding a deconstructor to your class can be done as below. It must be named `Deconstruct` and be a `public void`. Any values we want deconstructed can be set as `out` parameters, then populated. Here all properties are being deconstructed, but a subset could be deconstructed if desired.
 
-```csharp
+```csharp linenums="1"
 class Student
 {
     public string Name { get; set; }
@@ -35,7 +34,7 @@ class Student
 
 To use positional parameters, I'll also set up a second model.
 
-```csharp
+```csharp linenums="1"
 class Teacher
 {
     public string Name { get; set; }
@@ -51,7 +50,7 @@ class Teacher
 
 Here is an example positional pattern. The discards (`_`) are used to 'match all'.
 
-```csharp
+```csharp linenums="1"
 public static class YourClassHere
 {
     public static bool IsInYear9English(Student student)
@@ -71,7 +70,7 @@ While an if statement would probably be easier to read and maintain in this exam
 
 I've updated the Student model to add a School property.
 
-```csharp
+```csharp linenums="1"
 class Student
 {
     public string Name { get; set; }
@@ -83,7 +82,7 @@ class Student
 
 I prefer using property patterns to positional patterns as they are much more readable. Here's an example method to check whether a student attends a particular school and has a form tutor who teaches Maths.
 
-```csharp
+```csharp linenums="1"
 public static class YourClassHere
 {
     public static bool IsStudentInGreenAcademyWithMathsFormTutor(Student student)
@@ -100,7 +99,7 @@ public static class YourClassHere
 
 This can be made more generic to accept an `object` rather than a `Student`, and check that object is a Student.
 
-```csharp
+```csharp linenums="1"
 public static class YourClassHere
 {
     public static bool IsStudentInGreenAcademyWithMathsFormTutor(object obj)
@@ -120,7 +119,7 @@ public static class YourClassHere
 
 These can be used in place of standard switch cases. I'm using a discard (`_`) for catching the default case for unmatched patterns.
 
-```csharp
+```csharp linenums="1"
 public static class YourClassHere
 {
     public static string DisplayPersonInfo (object person)
@@ -139,7 +138,7 @@ public static class YourClassHere
 
 The syntax can make it easier to read, and it can be a lot more powerful. You can also define recursive switch patterns.
 
-```csharp
+```csharp linenums="1"
 public static class YourClassHere
 {
     public static string DisplayPersonInfo (object person)
@@ -165,7 +164,7 @@ public static class YourClassHere
 
 You can also use Switch Expressions with Tuples to write even more useful code. For example, you could be creating a game with crafting, combining two items to make another.
 
-```csharp
+```csharp linenums="1"
 public static class YourClassHere
 {
     public static CraftingMaterial GetCraftingMaterial (CraftingMaterial item1, CraftingMaterial item2)

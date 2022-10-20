@@ -1,15 +1,12 @@
 ---
-layout: post
-parent: Containers & Deploying
-nav_order: 3
-title:  "Docker Compose for Elasticsearch and Kibana 7.9"
-date:   2021-07-13 21:38:05 +0100
-categories: deploying docker
+tags:
+  - deploying
+  - docker
 ---
 
-# {{page.title}}
+# Docker Compose for Elasticsearch and Kibana 7.9
 
-_{{page.date}}_
+_2021-07-13_
 
 In this post, I will cover how you can set up Elasticsearch and Kibana with a single `docker-compose.yml` file.
 

@@ -1,17 +1,23 @@
 ---
-layout: post
-parent: Web Development
-nav_order: 3
-title:  "Setting up remote containers for IAC dev environments in dotnet 6 with postgres and SMTP"
-date:   2022-04-20 15:51:03 +0000
-categories: dotnet core asp vscode remote-container remote container iac postgress smtp dev environment
+tags:
+  - web development
+  - dotnet
+  - asp
+  - c#
+  - vscode
+  - devcontainer
+  - remote-container
+  - iac
+  - postgres
+  - smtp
+  - dev environment
 ---
 
-# {{page.title}}
+# Setting up remote containers for IAC dev environments in dotnet 6 with postgres and SMTP
 
-_{{page.date}}_
+_2022-04-20_
 
-![](/assets/devcontainer.gif)
+![](/img/devcontainer.gif)
 
 In this post I will go through how to set up remote containers for a dotnet 6 API project using PostgreSQL and an SMTP server, so that any new devs picking up the project only have to clone down the git repo and open it in Visual Studio code to get started debugging it.
 
@@ -38,7 +44,7 @@ This is customised from the default Microsoft file. You can change the name, the
 
 There is an issue where Omnisharp, the underlying technology in the C# vscode plugin doesn't work properly unless `dotnet restore` is run at the point of setting up the dev container, so do not remove that command.
 
-```json
+```json linenums="1"
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.231.6/containers/dotnet-postgres
 {
@@ -182,7 +188,7 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 To get the SMTP working, use these keys. If you're doing anything more fancy with `bytemark/smtp` than just the default functionality you may need to change the SMTP port.
 
-```json
+```json linenums="1"
 "SmtpHost": "mail",
 "SmtpPort": 25,
 ```

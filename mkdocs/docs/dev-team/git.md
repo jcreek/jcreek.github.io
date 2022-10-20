@@ -1,15 +1,12 @@
 ---
-layout: post
-parent: Development Teams
-nav_order: 1
-title:  "The way I recommend using git in a dev team"
-date:   2022-03-11 22:46:33 +0000
-categories: git
+tags:
+  - dev teams
+  - git
 ---
 
-# {{page.title}}
+# The way I recommend using git in a dev team
 
-_{{page.date}}_
+_2022-03-11_
 
 Looking back at my old git commits reveals an entertaining, if slightly embarassing mess.
 
@@ -52,7 +49,7 @@ I never used to care about my commit messages because it was only me reading the
 
 There is a single git commit that I think should be required reading for all developers. It is from a developer by the name of [Dan Carley](https://twitter.com/dancarley) working on GOV.UK, and it has the rather unassuming name of ["Convert template to US-ASCII to fix error"](https://github.com/alphagov/govuk-puppet/commit/63b36f93bf75a848e2125008aa1e880c5861cf46).
 
-![The Carley Commit](/assets/the-carley-commit.png)
+![The Carley Commit](/img/the-carley-commit.png)
 
 I found it through [this blog](https://dhwthompson.com/2019/my-favourite-git-commit) and I'd highly recommend reading through it, but essentially the thing I like most about this commit is it explains why the change was made, not just what the change was.
 

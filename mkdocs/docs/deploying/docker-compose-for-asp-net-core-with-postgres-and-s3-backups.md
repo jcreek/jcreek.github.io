@@ -1,15 +1,12 @@
 ---
-layout: post
-parent: Containers & Deploying
-nav_order: 1
-title:  "Docker Compose for ASP.Net Core with Postgres + S3 backups"
-date:   2021-07-12 21:01:45 +0100
-categories: deploying docker
+tags:
+  - deploying
+  - docker
 ---
 
-# {{page.title}}
+# Docker Compose for ASP.Net Core with Postgres + S3 backups
 
-_{{page.date}}_
+_2021-07-12_
 
 In this post, I will cover how I set up the following application structure, run from a single `docker-compose` file:
 

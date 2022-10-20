@@ -1,15 +1,13 @@
 ---
-layout: post
-parent: Development Teams
-nav_order: 2
-title:  "How to write an excellent readme file"
-date:   2022-03-16 19:01:03 +0000
-categories: git readme
+tags:
+  - dev teams
+  - git
+  - readme
 ---
 
-# {{page.title}}
+# How to write an excellent readme file
 
-_{{page.date}}_
+_2022-03-16_
 
 All git projects need a readme file, to explain what it is, why it exists, how it works and how to use it. A good starting point with guidance can be found below.
 

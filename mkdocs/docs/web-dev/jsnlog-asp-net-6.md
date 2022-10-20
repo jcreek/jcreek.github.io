@@ -1,15 +1,16 @@
 ---
-layout: post
-parent: Web Development
-nav_order: 2
-title:  "Adding JSNLog to ASP .Net 6 with Serilog"
-date:   2022-01-18 21:43:32 +0000
-categories: dotnet core asp serilog jsnlog
+tags:
+  - web development
+  - dotnet
+  - asp
+  - c#
+  - serilog
+  - jsnlog
 ---
 
-# {{page.title}}
+# Adding JSNLog to ASP .Net 6 with Serilog
 
-_{{page.date}}_
+_2022-01-18_
 
 In this post I will go through the steps required to get an optimal install of JSNLog in ASP dotnet 6 projects using Serilog. JSNLog is a fantastic tool for logging uncaught javascript exceptions to the backend's logging system, and can be used for a variety of other things. This config includes batching of messages to reduce calls made to the server, as well as buffering, where helpful debugging logs are only sent if there's a fatal log that's also being sent, to make it easier to diagnose bugs without unnecessary diagnostic logs appearing at all times.
 
@@ -21,7 +22,7 @@ Add `@addTagHelper "*, jsnlog"` to enable the tag helper.
 
 ## Startup.cs
 
-```csharp
+```csharp linenums="1"
 using Destructurama;
 using JSNLog;
 
@@ -84,7 +85,7 @@ Thirdly, it sets up logging any uncaught JS exceptions, and any exceptions insid
 
 Fourthly, using stacktrace.js it handles getting the relevant stacktrace using sourcemaps.
 
-```html
+```html linenums="1"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsnlog/2.30.0/jsnlog.min.js"
     asp-fallback-src="~/jsnlog.min.js"
     asp-fallback-test="window.JL"
@@ -170,7 +171,7 @@ Fourthly, using stacktrace.js it handles getting the relevant stacktrace using s
 
 ## CustomLoggingAdapter.cs
 
-```csharp
+```csharp linenums="1"
 using JSNLog;
 using Newtonsoft.Json;
 using System.Text;

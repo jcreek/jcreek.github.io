@@ -1,15 +1,21 @@
 ---
-layout: post
-parent: Web Development
-nav_order: 4
-title:  "How to set up a Node.js Typescript project well"
-date:   2022-06-15 19:26:00 +0000
-categories: nodejs typescript eslint webpack babel sourcemaps scss vscode devcontainer docker
+tags:
+  - web development
+  - nodejs
+  - typescript
+  - eslint
+  - webpack
+  - babel
+  - sourcemaps
+  - scss
+  - vscode
+  - devcontainer
+  - docker
 ---
 
-# {{page.title}}
+# How to set up a Node.js Typescript project well
 
-_{{page.date}}_
+_2022-06-15_
 
 This post covers how to set up a project with Node.js and Typescript using eslint, webpack, babel, source maps, SCSS and vscode devcontainers using Docker.
 
@@ -58,7 +64,7 @@ RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \
 
 ### `devcontainer.json`
 
-```json
+```json linenums="1"
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/typescript-node
 {
@@ -122,7 +128,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 Within the `.vscode` folder you'll need to create this `launch.json` file:
 
-```json
+```json linenums="1"
 {
     "version": "0.2.0",
     "configurations": [
@@ -159,7 +165,7 @@ node_modules
 
 ### `.eslintrc.json`
 
-```json
+```json linenums="1"
 {
     "env": {
         "browser": true,
@@ -203,7 +209,7 @@ Create the following files:
 
 ### `custom.d.ts`
 
-```ts
+```ts linenums="1"
 declare module '*.svg' {
     const content: any;
     export default content;
@@ -212,7 +218,7 @@ declare module '*.svg' {
 
 ### `tsconfig.json`
 
-```json
+```json linenums="1"
 {
   "compilerOptions": {
     "preserveConstEnums": true
@@ -224,7 +230,7 @@ declare module '*.svg' {
 
 ### `webpack.config.js`
 
-```js
+```js linenums="1"
 const path = require('path');
 
 module.exports = {
@@ -288,7 +294,7 @@ module.exports = {
 
 ### `package.json`
 
-```json
+```json linenums="1"
 {
   "name": "your app name",
   "version": "1.0.0",
