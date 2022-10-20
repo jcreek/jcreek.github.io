@@ -1,0 +1,99 @@
+site_name: Josh Creek's Blog
+site_url: https://www.jcreek.co.uk/
+repo_url: https://github.com/jcreek/jcreek.github.io
+repo_name: Spotted an issue?
+edit_uri: edit/master/mkdocs/
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  favicon: img/favicon.ico
+  logo: img/noogler-hat-edited-round.png
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: amber
+      accent: amber
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: amber
+      accent: amber
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+
+copyright: Copyright &copy; 2011 - 2022 Josh Creek
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      I use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of my documentation and whether users
+      find what they're searching for. With your consent, you're helping me to
+      make my documentation better.
+    actions:
+      - accept
+  analytics:
+    provider: google
+    property: G-MYNBTM1YQW
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jcreek
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/jcreek23
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jrcreek
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/scruffy238/
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Containers & Deploying:
+    # - deploying/index.md
+    - Docker Compose for ASP.Net Core with Postgres + S3 backups: deploying/docker-compose-for-asp-net-core-with-postgres-and-s3-backups.md
+    - Docker Compose for S3 Backup and Restore of PostgreSQL: deploying/docker-compose-s3-postgres-backup-and-restore.md
+    - Docker Compose for Elasticsearch and Kibana 7.9: deploying/elasticsearch-and-kibana.md
+  - Development Teams:
+    - The way I recommend using git in a dev team: dev-team/git.md
+    - How to write an excellent readme file: dev-team/readme-files.md
+  - Home Server:
+    - TrueNAS Scale:
+      - Installing Home Assistant OS on Truenas Scale: home-server/truenas-scale/installing-homeassistant-on-truenas-scale.md
+  - Web Development:
+    - Setting up remote containers for IAC dev environments in dotnet 6 with postgres and SMTP: web-dev/dev-environment-container-vscode.md
+    - Adding JSNLog to ASP .Net 6 with Serilog: web-dev/jsnlog-asp-net-6.md
+    - How to set up a Node.js Typescript project well: web-dev/node-js-typescript.md
+    - Creating a reactive SPA simply within an ASP.Net Core web app with Vue.js: web-dev/simple-vue-spa-in-asp-dotnet-core.md
+    - Dotnet & C#:
+      - C# 8 Pattern Matching: web-dev/dotnet-csharp/pattern-matching.md
