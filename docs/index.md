@@ -9,6 +9,11 @@ hide:
 
 This is the place where I ramble about technology and coding. Sometimes Computer Science education too.
 
+Some tools you might be interested in:
+
+- [Selection Wheel](https://wheel.jcreek.co.uk/) - a random selection spinner, use as a web app or install using Chrome on Windows and Android, or Safari on Mac and iOS.
+- [Hathorsoft Plan](https://plan.hathorsoft.com/) - a lesson planning tool designed for trainee teachers and NQTs but suitable for all.
+
 ## About Me
 
 ### Highlights
