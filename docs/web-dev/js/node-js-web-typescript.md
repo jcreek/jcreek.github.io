@@ -13,7 +13,7 @@ tags:
   - docker
 ---
 
-# How to set up a Node.js Typescript project well
+# How to set up a Node.js Typescript web project well
 
 _2022-06-15_
 
