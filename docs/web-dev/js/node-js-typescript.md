@@ -257,7 +257,7 @@ Create the following files:
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon --legacy-watch",
     "lint": "eslint . --ext .ts",
     "fix": "eslint . --ext .ts --fix",
     "build": "rimraf ./dist && tsc",
