@@ -41,7 +41,7 @@ theme:
     - search.highlight
     - search.share
 
-copyright: Copyright &copy; 2011 - 2022 Josh Creek
+copyright: Copyright &copy; 2011 - 2023 Josh Creek
 
 extra:
   consent:
@@ -90,10 +90,14 @@ nav:
   - Home Server:
     - TrueNAS Scale:
       - Installing Home Assistant OS on Truenas Scale: home-server/truenas-scale/installing-homeassistant-on-truenas-scale.md
+      - Mounting SMB shares at boot on Truenas Scale: home-server/truenas-scale/mounting-smb-shares-at-boot-on-truenas-scale.md
   - Web Development:
     - Setting up remote containers for IAC dev environments in dotnet 6 with postgres and SMTP: web-dev/dev-environment-container-vscode.md
-    - Adding JSNLog to ASP .Net 6 with Serilog: web-dev/jsnlog-asp-net-6.md
-    - How to set up a Node.js Typescript project well: web-dev/node-js-typescript.md
     - Creating a reactive SPA simply within an ASP.Net Core web app with Vue.js: web-dev/simple-vue-spa-in-asp-dotnet-core.md
     - Dotnet & C#:
       - C# 8 Pattern Matching: web-dev/dotnet-csharp/pattern-matching.md
+      - Semantic Kernel (GPT with C#) - using a vector database to store embeddings: /web-dev/dotnet-csharp/semantic-kernel-vector-database/index.html
+      - Adding JSNLog to ASP .Net 6 with Serilog: web-dev/dotnet-csharp/jsnlog-asp-net-6.md
+    - Javascript & Typescript:
+      - How to set up a Node.js Typescript project well: web-dev/js/node-js-typescript.md
+      - How to set up a Node.js Typescript web project well: web-dev/js/node-js-web-typescript.md
