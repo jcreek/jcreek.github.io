@@ -44,6 +44,8 @@ theme:
 copyright: Copyright &copy; 2011 - 2023 Josh Creek
 
 extra:
+  head:
+    - '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5812114745839139" crossorigin="anonymous"></script>'
   consent:
     title: Cookie consent
     description: >- 
