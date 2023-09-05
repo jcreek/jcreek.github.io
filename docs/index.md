@@ -11,6 +11,7 @@ This is the place where I ramble about technology and coding. Sometimes Computer
 
 Some tools you might be interested in:
 
+- [Estimation Poker](https://estimationpoker.jcreek.co.uk) - a web app designed to assist scrum teams in performing estimations quickly and with minimal effort.
 - [Selection Wheel](https://wheel.jcreek.co.uk/) - a random selection spinner, use as a web app or install using Chrome on Windows and Android, or Safari on Mac and iOS.
 - [Hathorsoft Plan](https://plan.hathorsoft.com/) - a lesson planning tool designed for trainee teachers and NQTs but suitable for all.
 
