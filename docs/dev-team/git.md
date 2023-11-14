@@ -59,15 +59,13 @@ As with most developers, I have my own strong opinions founded in habit for what
 
 For every ticket, there should be a separate git branch. This code will not be merged into the main development branch until it has been through a pull request and been reviewed.
 
-If it's a big feature ticket, a feature branch should be created for that ticket, and it should be split into sub-tasks, each of which have their own branch and get merged into the feature branch after PRs are approved. Once all the sub-tasks have been PRed and their branches have been merged into the feature branch, the feature branch can be PRed and merge into the development branch.
+If it's a big feature ticket, a feature branch should be created for that ticket, and it should be split into sub-tasks, each of which have their own branch and get merged into the feature branch after PRs are approved. Once all the sub-tasks have been PRed and their branches have been merged into the feature branch, the feature branch can be PRed and merge into the development branch. If you find you're needing to do all your changes in one branch, do so, then split it up by making new branches and cherry-picking or re-committing once you have your finished code. This will make it significantly easier to review, and to review well.
 
-Unless you're working on an open source project, the merge strategy for PRs should not involve squashing. Merge commits are fine, and they leave all individual commits available for comparison, reverting and cherry-picking.
+Unless you're working on a sub-task branch, the merge strategy for PRs should involve squashing. Merge commits are fine, and they leave all individual commits available for comparison, reverting and cherry-picking, but they also include all of the ongoing dev work and changes based on PR feedback, which can clutter up a project. 
 
-Not using squashed commits makes having good quality commit messages even more important. Committing often and messily is a bad habit. Instead break down tasks into suitably small sub-tasks, so that they can be worked on in isolation without taking long enough to warrant committing unfinished code.
+Not using squashed commits makes having good quality commit messages even more important. Committing often and messily is a bad habit (unless you're squashing). Instead break down tasks into suitably small sub-tasks, so that they can be worked on in isolation without taking long enough to warrant committing unfinished code.
 
 A key part of the PR process is reviewing code, not only for bugs, but for quality. The git commit messages are a critical part of this. No developer is perfect, so helping one another in PRs is key to having an excellent git history. If a PR comes in with bad commit messages, it should be rejected and redone with good commit messages.
-
-More detail about code reviews and PRs can be found in a separate doc.
 
 ## Git Messages
 
@@ -121,6 +119,22 @@ Some very good reasons to use this convention are:
 - Communicating the nature of changes to teammates, the public, and other stakeholders.
 - Triggering build and publish processes.
 - Making it easier for people to contribute to your projects by allowing them to explore a more structured commit history.
+
+## Code Reviews (in PRs)
+
+When reviewing code, here are the key things to be paying attention to:
+
+- Refactoring to remove old/inefficient/not working code: Ensure that the code changes include removal of redundant or outdated code snippets. Refactoring should improve the code's efficiency, readability, and maintainability without altering its functionality.
+- Code style: Review for consistency with the project's coding standards. This includes adherence to naming conventions, file organisation, indentation, and comment quality. Consistent code style aids in understanding and maintaining the code base.
+- Code smells: Look for indicators of deeper problems in the code, such as duplicate code, long methods, large classes, and improper use of object-oriented principles. These "smells" can indicate areas that may need refactoring.
+- Best practices and design patterns: Check if the code follows established best practices for the language and framework being used. Verify the appropriate use of design patterns which can help in solving commonly occurring problems in a more efficient way.
+- Performance considerations: Analyze the changes for potential performance issues, such as memory leaks, inefficient algorithms, and unnecessary database queries. The goal is to ensure that the new code does not introduce performance regressions.
+- Security aspects: Evaluate the code for security vulnerabilities. This includes checking for SQL injection, proper handling of user data, adherence to authentication and authorization mechanisms, and ensuring data privacy.
+- Testing: Ensure that the new code includes relevant unit tests or integration tests that cover the new functionality and any changes to existing functionality. Good test coverage is essential for maintaining code quality over time.
+- Documentation: Verify that any new methods, classes, or significant logic changes are accompanied by appropriate comments or documentation. This is crucial for future maintainability, making it easier for others to understand the purpose and functionality of the code.
+- Overall code quality and readability: Assess the overall quality of the code. The code should be readable, well-organized, and logically structured. It should be easy for someone else on the team to understand and maintain.
+
+Remember, as a code reviewer, you are responsible for ensuring the quality and integrity of the code base. Your review can help prevent issues and improve the overall quality of the software. Therefore, it's important to be thorough and provide constructive feedback during the review process. A reviewer is equally responsible for any bugs or issues found in after a PR has been approved and merged. If a PR is too big or complex to reasonably review well, reject it and flag this to the developer who submitted it. Where possible you should test the branch, but at the very least any UI changes should be demonstrated via a screenshot or gif in the description of the PR. 
 
 ## Automating Git Commit Message Formatting
 
