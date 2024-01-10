@@ -90,6 +90,8 @@ nav:
     - The way I recommend using git in a dev team: dev-team/git.md
     - How to write an excellent readme file: dev-team/readme-files.md
   - Home Server:
+    - Generative AI:
+      - How to install Ollama with a ChatGPT-like web UI: home-server/generative-ai/ollama.md
     - TrueNAS Scale:
       - Installing Home Assistant OS on Truenas Scale: home-server/truenas-scale/installing-homeassistant-on-truenas-scale.md
       - Mounting SMB shares at boot on Truenas Scale: home-server/truenas-scale/mounting-smb-shares-at-boot-on-truenas-scale.md

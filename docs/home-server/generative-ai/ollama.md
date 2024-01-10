@@ -5,7 +5,7 @@ tags:
   - mistral
 ---
 
-# Installing Ollama with a ChatGPT-like web UI
+# How to install Ollama with a ChatGPT-like web UI
 
 _2024-01-10_
 
