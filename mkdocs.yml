@@ -41,7 +41,7 @@ theme:
     - search.highlight
     - search.share
 
-copyright: Copyright &copy; 2011 - 2023 Josh Creek
+copyright: Copyright &copy; 2011 - 2024 Josh Creek
 
 extra:
   head:
