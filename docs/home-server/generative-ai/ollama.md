@@ -11,10 +11,10 @@ _2024-01-10_
 
 I am assuming that this is being installed on Ubuntu Server. Instructions compiled from:
 
-- https://www.zdnet.com/article/docker-101-how-to-install-docker-on-ubuntu-server-22-04/
-- https://ollama.ai/download/linux
-- https://github.com/jmorganca/ollama/blob/main/docs/faq.md
-- https://github.com/ollama-webui/ollama-webui
+- [https://www.zdnet.com/article/docker-101-how-to-install-docker-on-ubuntu-server-22-04/](https://www.zdnet.com/article/docker-101-how-to-install-docker-on-ubuntu-server-22-04/)
+- [https://ollama.ai/download/linux](https://ollama.ai/download/linux)
+- [https://github.com/jmorganca/ollama/blob/main/docs/faq.md](https://github.com/jmorganca/ollama/blob/main/docs/faq.md)
+- [https://github.com/ollama-webui/ollama-webui](https://github.com/ollama-webui/ollama-webui)
 
 First, install Ubuntu Server, ensuring that you have a modern CPU with AVX2 support as we're going to be using the CPU to run the model, rather than a GPU. You'll also need at least 8GB RAM for the model to run because we're using [Mistral 7B 0.2](https://ollama.ai/library/mistral), which requires roughly 7GB RAM to run.
 
@@ -100,7 +100,7 @@ Finally you can visit your Ubuntu machine's IP address with port 3000 and create
 
 ## Bonus model
 
-If you want to use a model specifically as a coding assistant then the best currently available is Mixtral...which needs at least 48GB RAM to run. Personally, I'm using the 6.7 billion parameter version of the deepseek-coder model. If you want to install it you can run: 
+If you want to use a model specifically as a coding assistant then the best currently available is Mixtral...which needs at least 48GB RAM to run. Personally, I'm using the 6.7 billion parameter version of the deepseek-coder model, which only needs 8GB to run. If you want to install it you can run:
 
 ```bash
 ollama run deepseek-coder:6.7b
