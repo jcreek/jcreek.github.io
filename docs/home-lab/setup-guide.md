@@ -50,15 +50,19 @@ To **ensure local services work even if the internet is down**, configure **Pi-h
 - Add **Local DNS Records**:
 
   - Web-services should direct to Nginx:
+
     - ai.creeknet.uk → `10.0.0.23`
     - home.creeknet.uk → `10.0.0.23`
     - nas.creeknet.uk → `10.0.0.23`
     - plex.creeknet.uk → `10.0.0.23`
+
   - Non-web services should direct to the actual servers:
+
     - rustdesk.creeknet.uk → `10.0.0.23` (dockerised on the same server as nginx)
     - vpn.creeknet.uk → `10.0.0.5` (redundant if the internet is down but included for completeness)
 
 - **Router DNS Settings**:
+
   - Primary DNS: `10.0.0.6` (Pi-hole)
   - Secondary DNS: `1.1.1.1` (Cloudflare)
 
@@ -87,9 +91,11 @@ services:
 ### **3.2 Configure Proxy Hosts**
 
 - ai.creeknet.uk → `http://10.0.0.20:8080` (Open Web UI)
+
   - Provide SSL certificate through Let’s Encrypt
   - Enable Websockets Support
   - Force SSL
+
 - home.creeknet.uk → `http://10.0.0.13:8123` (Home Assistant)
 
   - Provide SSL certificate through Let’s Encrypt
@@ -107,6 +113,9 @@ services:
     ```
 
 - nas.creeknet.uk → `https://10.0.0.9:1001` (Asustor NAS)
+
   - Provide SSL certificate through Let’s Encrypt
+
 - plex.creeknet.uk → `http://10.0.0.11:32400` (Plex Media Server)
+
   - Provide SSL certificate through Let’s Encrypt
