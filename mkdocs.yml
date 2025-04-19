@@ -15,7 +15,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
       primary: amber
       accent: amber
@@ -41,14 +41,14 @@ theme:
     - search.highlight
     - search.share
 
-copyright: Copyright &copy; 2011 - 2024 Josh Creek
+copyright: Copyright &copy; 2011 - 2025 Josh Creek
 
 extra:
   head:
     - '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5812114745839139" crossorigin="anonymous"></script>'
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       I use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of my documentation and whether users
       find what they're searching for. With your consent, you're helping me to
@@ -82,26 +82,26 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Containers & Deploying:
-    # - deploying/index.md
-    - Docker Compose for ASP.Net Core with Postgres + S3 backups: deploying/docker-compose-for-asp-net-core-with-postgres-and-s3-backups.md
-    - Docker Compose for S3 Backup and Restore of PostgreSQL: deploying/docker-compose-s3-postgres-backup-and-restore.md
-    - Docker Compose for Elasticsearch and Kibana 7.9: deploying/elasticsearch-and-kibana.md
+      # - deploying/index.md
+      - Docker Compose for ASP.Net Core with Postgres + S3 backups: deploying/docker-compose-for-asp-net-core-with-postgres-and-s3-backups.md
+      - Docker Compose for S3 Backup and Restore of PostgreSQL: deploying/docker-compose-s3-postgres-backup-and-restore.md
+      - Docker Compose for Elasticsearch and Kibana 7.9: deploying/elasticsearch-and-kibana.md
   - Development Teams:
-    - The way I recommend using git in a dev team: dev-team/git.md
-    - How to write an excellent readme file: dev-team/readme-files.md
+      - The way I recommend using git in a dev team: dev-team/git.md
+      - How to write an excellent readme file: dev-team/readme-files.md
   - Home Server:
-    - Generative AI:
-      - How to install Ollama with a ChatGPT-like web UI: home-server/generative-ai/ollama.md
-    - TrueNAS Scale:
-      - Installing Home Assistant OS on Truenas Scale: home-server/truenas-scale/installing-homeassistant-on-truenas-scale.md
-      - Mounting SMB shares at boot on Truenas Scale: home-server/truenas-scale/mounting-smb-shares-at-boot-on-truenas-scale.md
+      - Generative AI:
+          - How to install Ollama with a ChatGPT-like web UI: home-server/generative-ai/ollama.md
+      - TrueNAS Scale:
+          - Installing Home Assistant OS on Truenas Scale: home-server/truenas-scale/installing-homeassistant-on-truenas-scale.md
+          - Mounting SMB shares at boot on Truenas Scale: home-server/truenas-scale/mounting-smb-shares-at-boot-on-truenas-scale.md
   - Web Development:
-    - Setting up remote containers for IAC dev environments in dotnet 6 with postgres and SMTP: web-dev/dev-environment-container-vscode.md
-    - Creating a reactive SPA simply within an ASP.Net Core web app with Vue.js: web-dev/simple-vue-spa-in-asp-dotnet-core.md
-    - Dotnet & C#:
-      - C# 8 Pattern Matching: web-dev/dotnet-csharp/pattern-matching.md
-      - Semantic Kernel (GPT with C#) - using a vector database to store embeddings: /web-dev/dotnet-csharp/semantic-kernel-vector-database/index.html
-      - Adding JSNLog to ASP .Net 6 with Serilog: web-dev/dotnet-csharp/jsnlog-asp-net-6.md
-    - Javascript & Typescript:
-      - How to set up a Node.js Typescript project well: web-dev/js/node-js-typescript.md
-      - How to set up a Node.js Typescript web project well: web-dev/js/node-js-web-typescript.md
+      - Setting up remote containers for IAC dev environments in dotnet 6 with postgres and SMTP: web-dev/dev-environment-container-vscode.md
+      - Creating a reactive SPA simply within an ASP.Net Core web app with Vue.js: web-dev/simple-vue-spa-in-asp-dotnet-core.md
+      - Dotnet & C#:
+          - C# 8 Pattern Matching: web-dev/dotnet-csharp/pattern-matching.md
+          - Semantic Kernel (GPT with C#) - using a vector database to store embeddings: /web-dev/dotnet-csharp/semantic-kernel-vector-database/index.html
+          - Adding JSNLog to ASP .Net 6 with Serilog: web-dev/dotnet-csharp/jsnlog-asp-net-6.md
+      - Javascript & Typescript:
+          - How to set up a Node.js Typescript project well: web-dev/js/node-js-typescript.md
+          - How to set up a Node.js Typescript web project well: web-dev/js/node-js-web-typescript.md
