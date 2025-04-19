@@ -1,4 +1,13 @@
+---
+tags:
+  - opnsense
+  - nintendo switch
+  - nat
+---
+
 # Opnsense Nintendo Switch Settings
+
+_2025-04-19_
 
 When trying to play some (mostly older) Nintendo Switch games with online multiplayer there are specific settings needed in Opnsense to ensure that the games can connect to other players and the Nintendo servers. This guide documents how I set up Opnsense to work with the Nintendo Switch.
 
